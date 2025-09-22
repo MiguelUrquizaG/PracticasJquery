@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+var palabrotas = ["cabrito","hijo de tu madre"]
+
     $(document).on("click","#btnAction",function(){
         var input = $("#textInput").val();
 
@@ -27,4 +30,10 @@ $(document).ready(function(){
      function toLowerCase(str){
         return str.toLowerCase();
     }
+
+    function cleanPalabrotas(str) {
+    palabrotas.forEach((element => str = str.replace(element,"")))
+    return str;
+  }
+
 })
